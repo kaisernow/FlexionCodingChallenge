@@ -7,11 +7,7 @@ import { ALL_UNIT_TYPES } from '../../../../shared/constants/conversion.contants
 import { IUnit } from 'src/app/shared/interfaces/conversion.interfaces';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { NotificationsComponent } from '../../../../shared/components/notifications/notifications.component';
-
-interface Food {
-  value: string;
-  viewValue: string;
-}
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-conversion',
@@ -30,7 +26,7 @@ export class ConversionComponent implements OnInit {
   public conversionForm = new FormGroup({
     input: new FormControl('', [
       Validators.required,
-      this.regExValidation(/^(([0-9]+)?\.?([0-9]+)?)$/)
+      this.regExValidation(/^-?\d*\.?\d+$/)
     ]),
     from: new FormControl('', [
       Validators.required,
@@ -42,7 +38,7 @@ export class ConversionComponent implements OnInit {
     ]),
     studentResponse: new FormControl('', [
       Validators.required,
-      this.regExValidation(/^(([0-9]+)?\.?([0-9]+)?)$/)
+      this.regExValidation(/^-?\d*\.?\d+$/)
     ]),
   });
   constructor(
@@ -51,7 +47,11 @@ export class ConversionComponent implements OnInit {
     private readonly conversionService: ConversionService) { }
 
   ngOnInit(): void {
-    this.conversionForm.valueChanges.subscribe(value => {
+    this.conversionForm.valueChanges
+    .pipe(
+      debounceTime(1000)
+    )
+    .subscribe(value => {
     const { input, from, to, studentResponse } = this.conversionForm.controls
 
       this.output = '';

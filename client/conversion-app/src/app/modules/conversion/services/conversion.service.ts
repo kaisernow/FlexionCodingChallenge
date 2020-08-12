@@ -9,13 +9,9 @@ import { IConvert } from '../../../shared/interfaces/conversion.interfaces';
   providedIn: 'root'
 })
 export class ConversionService {
-  private baseUrl =
-  //  process.env.NODE_ENV === "production"? `/api/v1/convert` : 
-  `http://localhost:3000/api/v1/convert`;
+  private baseUrl = `http://localhost:3000/api/v1/convert`;
 
   constructor(private readonly http: HttpClient) {}
-
- 
 
   isValid(payload: IConvert): Observable<any>{
     return this.http.post(this.baseUrl, payload)
