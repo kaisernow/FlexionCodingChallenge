@@ -3,5 +3,6 @@ export const standardEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+
 
 export const standardPassword = /^.*(?=.{6,})(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!&@$%&? "]).*$/;
 
-export const standardInput = /^(([0-9]+)?\.?([0-9]+)?)$/;
+export const standardInput = /^-?\d*\.?\d+$/;
+
 
