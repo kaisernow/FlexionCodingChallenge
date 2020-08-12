@@ -59,8 +59,17 @@ export const validPayloads: IConvert[] = [
         from: 'celsius',
         to: 'kelvin',
         response: 273.2
+    },{
+        input: -500,
+        from: 'tableSpoonS ',
+        to: ' TableSpoonS',
+        response: -500
+    },{
+        input: -100,
+        from: ' celsius',
+        to: 'FahrenHeit ',
+        response: -148
     }
-    
 ];
 
 export const invalids : IConvert[] = [

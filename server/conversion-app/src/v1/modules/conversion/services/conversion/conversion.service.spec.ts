@@ -1,6 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { ConversionService } from './conversion.service';
 import { validPayloads, invalidPayloads } from '../../../../mocks/payloads.mocks';
+import { async } from 'rxjs';
 
 describe('ConversionService', () => {
   let service: ConversionService;
@@ -71,5 +72,12 @@ describe('ConversionService', () => {
     res = await service.determineIfCorrect(validPayloads[9]);
     expect(res.message).toEqual("correct");
   });  
+
+  it('should support negative values', async () => {
+    let res = await service.determineIfCorrect(validPayloads[10]);
+    expect(res.message).toEqual("correct");
+    res = await service.determineIfCorrect(validPayloads[11]);
+    expect(res.message).toEqual("correct");
+  })
 
 });

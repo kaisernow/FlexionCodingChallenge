@@ -2,8 +2,7 @@ import { TestBed } from '@angular/core/testing';
 
 import { ConversionService } from './conversion.service';
 import { correctPayload, incorrectPayload, emptyPayload, invalidPayload } from 'src/app/shared/mocks/payloads.mocks';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { HttpClientModule } from '@angular/common/http';
 
 describe('ConversionService', () => {
   let service: ConversionService;
