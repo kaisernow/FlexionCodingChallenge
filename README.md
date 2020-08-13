@@ -37,7 +37,7 @@ OR
 # Use Command Line Interface
 ### run command line interface;
 From root folder:
-* `cd server`
+* `cd server/conversion-app`
 * `npm install && npm run start`
 * `npm run command-line`
 
@@ -49,7 +49,6 @@ From root folder:
 * Documentation of angular application
 * Migration of Restful api to graphql 
 * Microservice architecture with kubernetes
-* Include CI/CD config
 * Test command line interface
 * Enable an overall http interceptor in angular app for proper network handling
 * Include a debounce event handler such that only when user is done typing the request is made
