@@ -1,5 +1,5 @@
 # Flexion Coding Challenge
-
+Live URL: [http://demoebsga-env.eba-b28bc2gd.us-east-1.elasticbeanstalk.com/conversion](http://demoebsga-env.eba-b28bc2gd.us-east-1.elasticbeanstalk.com/conversion "Flexion Coding Challenge")
 
 ### To run in production mode
 * install docker-compose on your machine
