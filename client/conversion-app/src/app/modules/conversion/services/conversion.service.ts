@@ -8,7 +8,7 @@ import { IConvert } from '../../../shared/interfaces/conversion.interfaces';
   providedIn: 'root'
 })
 export class ConversionService {
-  private baseUrl = isDevMode() ? "http://demoebsga-env.eba-b28bc2gd.us-east-1.elasticbeanstalk.com/api/v1/" : "http://localhost:3000/api/v1/";
+  private baseUrl = !isDevMode() ? "http://demoebsga-env.eba-b28bc2gd.us-east-1.elasticbeanstalk.com/api/v1/" : "http://localhost:3000/api/v1/";
 
   constructor(private readonly http: HttpClient) {}
 
