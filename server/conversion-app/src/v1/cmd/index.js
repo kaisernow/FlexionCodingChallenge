@@ -1,6 +1,6 @@
 const readline = require('readline');
 const log = console.log;
-const standardInput = /^(([0-9]+)?\.?([0-9]+)?)$/;
+const standardInput = /^-?\d*\.?\d+$/;
 const { ALL_UNIT_TYPES } = require('./../../../dist/v1/constants');
 const { normalizeString, normalizeNumber, oneDecimalApproximate } = require('./../../../dist/v1/utils');
 const { ConversionService } = require('./../../../dist/v1/modules/conversion/services/conversion/conversion.service');

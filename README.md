@@ -3,16 +3,16 @@ Live URL: [http://demoebsga-env.eba-b28bc2gd.us-east-1.elasticbeanstalk.com/conv
 
 ### To run in production mode
 * install docker-compose on your machine
-* clone ConversionApp && cd ConversionApp
-* run `docker-compose up`
+* run `docker-compose up` in root directory
 * go to `http://localhost:3000`
+
 
 ### OR
 
 # Frontend
-From root folder:
-* `cd frontend`
-* Add angular cli to your machine : `npm install -g @angular/cli`
+From root folder  :
+* `cd client/conversion-app`
+* `npm i`
 ### run tests
 * For unit test : `npm run test`
 * For e2e : `npm run cypress`
@@ -22,11 +22,11 @@ From root folder:
 
 # Backend
 From root folder:
-* `cd server`
+* `cd server/conversion-app`
+* `npm i`
 ### run tests
 * For both unit & e2e tests: `npm run test`
 ### start application in prod
-* `npm run build`
 * `npm run start:prod`
 
 Then,
@@ -38,19 +38,16 @@ OR
 ### run command line interface;
 From root folder:
 * `cd server/conversion-app`
-* `npm install && npm run start`
+* `npm install`
 * `npm run command-line`
 
 
 ## To improve on the app
 
-* Enable Caching on the server side
+* Using NgRx for state management 
 * Documentation of the nest js api
 * Documentation of angular application
-* Migration of Restful api to graphql 
-* Microservice architecture with kubernetes
 * Test command line interface
 * Enable an overall http interceptor in angular app for proper network handling
-* Include a debounce event handler such that only when user is done typing the request is made
 
 
