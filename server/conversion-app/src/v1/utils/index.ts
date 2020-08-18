@@ -14,5 +14,5 @@ export const OneDecimal = (value, precision = 1) => {
 }
 
 export const oneDecimalApproximate = value => {
-	return Math.round(value * 10) / 10;
+	return Math.sign(value) * Math.round(Math.abs(value) * 10) / 10;
 }
