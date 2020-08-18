@@ -35,7 +35,7 @@ export const VOLUME_MAP: IUnit[] = [
     },
     {
         unit: "tablespoons",
-        symbol: "tsp"
+        symbol: "Tbs"
     }, 
     {
         unit: "cubic-inches",
