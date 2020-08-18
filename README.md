@@ -16,8 +16,8 @@ From root folder  :
 ### run tests
 * For unit test : `npm run test`
 * For e2e : `npm run cypress`
-### run app in prod mode (ssr)
-* To run application in production mode : `npm run start`
+### run app 
+* To run application : `npm run start`
 
 
 # Backend
